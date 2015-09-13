@@ -44,7 +44,7 @@ module Sinatra
         500,
         {
           "Content-Type" => content_type,
-          "Content-Length" => Rack::Utils.bytesize(body.join).to_s
+          "Content-Length" => body.join.bytesize.to_s
         },
         body
       ]
